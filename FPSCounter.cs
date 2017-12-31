@@ -14,11 +14,13 @@ namespace UnityStandardAssets.Utility
         const string display = "{0} FPS";
         private TMP_Text m_Text;
 
+        public Color m_Color;
 
         private void Start()
         {
             m_FpsNextPeriod = Time.realtimeSinceStartup + fpsMeasurePeriod;
             m_Text = GetComponent<TMP_Text>();
+            m_Text.color = m_Color;
         }
 
 
